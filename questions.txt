@@ -1,0 +1,12 @@
+Question
+
+1. We have multiple Python services including a payroll system that integrates 
+   with a payment provider using webhooks. How would you ensure the webhook 
+   endpoint is secure, reliable, and scalable
+
+2. Deploy the Flask application on the virtual server using a production-grade 
+   application server instead of the built-in Flask development server.
+
+3. Automate the provisioning of the virtual server and deployment of the 
+   Flask application.
+   Use infrastructure automation tools such as: Terraform or Ansible
