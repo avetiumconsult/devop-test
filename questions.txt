@@ -1,12 +1,63 @@
-Question
+Section 1: Docker Proficiency (Python Stack)
+User Story
+As a containerization specialist, I need to create Docker configurations that provide consistent environments for development teams.
+Tasks
+1. Create or use a custom Docker image for the Python web app:
+    * Base: Python (latest stable)
+    * Include:
+        * Nginx (reverse proxy)
+        * Python runtime (with pip)
+        * App dependencies
+2. Run the Web container:
+    * Expose ports: 80, 443
+    * Bind mount a writable host directory (for app code)
+3. Run a Database container:
+    * Use latest MySQL or MariaDB
+    * Expose port 3306
+    * Bind mount persistent storage
+4. Configure Docker:
+    * Create a custom bridge network
+    * Ensure containers communicate via service names
 
-1. We have multiple Python services including a payroll system that integrates 
-   with a payment provider using webhooks. How would you ensure the webhook 
-   endpoint is secure, reliable, and scalable
+Section 2: Web & Database Servers
+User Story
+As a system engineer, I need to verify that services are correctly configured, optimized, and production-ready.
+Tasks
+Web Container:
+1. Connect to the container.
+2. Verify:
+    * Python version (latest stable)
+    * Nginx is running and properly configured
+3. Deploy the provided Python application:
+    * Install dependencies (pip install -r requirements.txt)
+    * Configure environment variables
+    * Ensure the app is accessible via browser
+Database Container:
+1. Connect to the container.
+2. Verify:
+    * MySQL/MariaDB version
+3. Create:
+    * Database
+    * User with proper privileges
+4. Connect the Python app to the database.
 
-2. Deploy the Flask application on the virtual server using a production-grade 
-   application server instead of the built-in Flask development server.
-
-3. Automate the provisioning of the virtual server and deployment of the 
-   Flask application.
-   Use infrastructure automation tools such as: Terraform or Ansible
+Section 3: DevOps (CI/CD Pipeline)
+User Story
+As a DevOps engineer, I need to implement a deployment pipeline that supports parallel development, prevents breaking changes, and enforces quality gates.
+Tasks
+1. Initialize a Git repository for the project.
+2. Create a branch on your name and push .
+3. Set up CI/CD:
+4. Create pipeline stages:
+    * Build
+        * Install dependencies
+    * Test
+        * Run basic checks (lint/tests if available)
+    * Deploy
+        * Deploy app to the server directory (bound to container)
+5. Ensure pipeline:
+    * Runs on every push
+    * Supports multiple branches (feature-based workflow)
+    * Prevents broken code from deployment
+6. Optional:
+    * Add rollback or versioning strategy
